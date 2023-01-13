@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3001
+const cors = require('cors')
 
+app.use(cors())
 app.get("/api", (req, res) => {
     res.json({"users": ["user1","user2","user3","user4","user5","user6"]})
 })
